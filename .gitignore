@@ -1,0 +1,102 @@
+########################################
+# Base ignores (macOS, editors, shells)
+########################################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vim
+*.swp
+*.swo
+*.viminfo
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# SSH keys (never commit)
+*.pem
+*.key
+*.pub
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Zsh & shells
+*.zsh_history
+*.bash_history
+
+# Common temp files
+*.tmp
+*.log
+*.bak
+*.old
+
+########################################
+# Observability stack ignores
+# (local artefacts only)
+########################################
+
+# Prometheus
+# Ignore WAL (write-ahead log) and TSDB data
+data/
+wal/
+prometheus-data/
+prometheus/wal/
+prometheus/data/
+
+# Grafana
+# Ignore local dashboards cache & SQLite DB
+grafana/data/
+grafana/plugins/
+grafana/logs/
+
+# Fluentd
+# Local pos files and runtime logs
+fluentd/log/
+fluentd/tmp/
+*.pos
+
+# Fluent Bit
+fluent-bit/log/
+fluent-bit/tmp/
+
+# Kibana
+# Local data & cache directories
+kibana/data/
+kibana/logs/
+
+# Jaeger
+# Local storage directories
+jaeger-data/
+jaeger/logs/
+
+########################################
+# Node / Python (if helper tools exist)
+########################################
+
+# Node
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+########################################
+# IDE / Dev Tools
+########################################
+
+# VS Code
+.vscode/
+
+# IntelliJ / JetBrains
+.idea/
+*.iml
